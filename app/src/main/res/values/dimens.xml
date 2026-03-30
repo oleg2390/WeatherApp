@@ -1,0 +1,18 @@
+<resources>
+    <dimen name="space_2">2dp</dimen>
+    <dimen name="space_4">4dp</dimen>
+    <dimen name="space_6">6dp</dimen>
+    <dimen name="space_8">8dp</dimen>
+    <dimen name="space_10">10dp</dimen>
+    <dimen name="space_12">12dp</dimen>
+    <dimen name="space_16">16dp</dimen>
+    <dimen name="space_20">20dp</dimen>
+
+    <dimen name="elevation_1">1dp</dimen>
+    <dimen name="elevation_2">2dp</dimen>
+
+    <dimen name="home_hour_item_width">96dp</dimen>
+    <dimen name="home_hour_item_height">132dp</dimen>
+    <dimen name="home_icon_current_size">88dp</dimen>
+    <dimen name="home_icon_item_size">36dp</dimen>
+</resources>
