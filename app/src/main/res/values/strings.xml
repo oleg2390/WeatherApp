@@ -1,3 +1,36 @@
 <resources>
     <string name="app_name">WeatherApp</string>
+    <string name="common_back">Назад</string>
+
+    <string name="home_title">Погода</string>
+    <string name="home_my_location_title">Мое местоположение</string>
+    <string name="home_choose_city">Выбрать город</string>
+    <string name="home_refresh">Обновить</string>
+    <string name="home_current_title">Сейчас</string>
+    <string name="home_hourly_title">Почасовой прогноз</string>
+    <string name="home_daily_title">Прогноз на 5 дней</string>
+    <string name="home_allow_location">Разрешить геолокацию</string>
+    <string name="home_temp_label">Температура: %1$s</string>
+    <string name="home_feels_like_label">Ощущается как: %1$s</string>
+    <string name="home_humidity_label">Влажность: %1$d%%</string>
+    <string name="home_wind_label">Ветер: %1$s</string>
+    <string name="home_description_label">Описание: %1$s</string>
+    <string name="home_location_denied_message">Геолокация отклонена. Выберите город вручную.</string>
+    <string name="home_no_city_message">Нет выбранного города. Дайте доступ к геолокации или выберите город.</string>
+    <string name="home_location_not_found_message">Не удалось определить местоположение. Выберите город вручную.</string>
+    <string name="home_weather_load_error">Ошибка загрузки погоды</string>
+    <string name="home_empty_title">Нет данных</string>
+    <string name="home_error_title">Произошла ошибка</string>
+
+    <string name="city_query_label">Город</string>
+    <string name="city_title">Выбор города</string>
+    <string name="city_search_button">Поиск</string>
+    <string name="city_saved_title">Сохраненные города</string>
+    <string name="city_no_saved">Сохраненных городов пока нет</string>
+    <string name="city_results_title">Результаты поиска</string>
+    <string name="city_search_idle">Введите название города и нажмите Поиск</string>
+    <string name="city_search_empty">Ничего не найдено</string>
+    <string name="city_search_error">Ошибка поиска города</string>
+    <string name="city_selected_title">%1$s, %2$s (выбран)</string>
+    <string name="city_selected_badge">Выбран</string>
 </resources>
