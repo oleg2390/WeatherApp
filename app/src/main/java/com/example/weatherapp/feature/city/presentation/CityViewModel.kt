@@ -11,6 +11,7 @@ import com.example.weatherapp.feature.city.domain.usecase.SaveSelectedCityUseCas
 import com.example.weatherapp.feature.city.domain.usecase.SearchCitiesUseCase
 import com.example.weatherapp.feature.city.presentation.model.CityUiItem
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.collections.immutable.toPersistentList
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -55,7 +56,7 @@ class CityViewModel @Inject constructor(
         viewModelScope.launch {
             getSavedCitiesUseCase().collect { cities ->
                 _state.update {
-                    it.copy(savedCities = cities.map { city -> city.toUiItem() })
+                    it.copy(savedCities = cities.map { city -> city.toUiItem() }.toPersistentList())
                 }
             }
         }
@@ -98,7 +99,7 @@ class CityViewModel @Inject constructor(
                             searchState = if (items.isEmpty()) {
                                 CitySearchState.Empty
                             } else {
-                                CitySearchState.Content(items)
+                                CitySearchState.Content(items.toPersistentList())
                             }
                         )
                     }

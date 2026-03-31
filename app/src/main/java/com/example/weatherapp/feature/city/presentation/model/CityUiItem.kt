@@ -1,5 +1,8 @@
 package com.example.weatherapp.feature.city.presentation.model
 
+import androidx.compose.runtime.Immutable
+
+@Immutable
 data class CityUiItem(
     val id: String,
     val savedCityId: Long?,

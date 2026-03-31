@@ -8,7 +8,7 @@ sealed interface UiText {
     data class DynamicString(val value: String) : UiText
     data class StringResource(
         @StringRes val resId: Int,
-        val args: List<Any> = emptyList()
+        val args: List<String> = emptyList()
     ) : UiText
 }
 

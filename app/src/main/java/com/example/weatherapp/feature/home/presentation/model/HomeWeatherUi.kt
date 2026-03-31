@@ -1,11 +1,17 @@
 package com.example.weatherapp.feature.home.presentation.model
 
+import androidx.compose.runtime.Immutable
+import kotlinx.collections.immutable.PersistentList
+
+@Immutable
 data class HomeWeatherUi(
     val current: CurrentWeatherUi,
-    val hourly: List<HourlyWeatherUi>,
-    val daily: List<DailyWeatherUi>
+    val hourly: PersistentList<HourlyWeatherUi>,
+    val daily: PersistentList<DailyWeatherUi>
+
 )
 
+@Immutable
 data class CurrentWeatherUi(
     val temp: String,
     val feelsLike: String,
@@ -15,6 +21,7 @@ data class CurrentWeatherUi(
     val iconUrl: String
 )
 
+@Immutable
 data class HourlyWeatherUi(
     val id: String,
     val time: String,
@@ -23,6 +30,7 @@ data class HourlyWeatherUi(
     val iconUrl: String
 )
 
+@Immutable
 data class DailyWeatherUi(
     val id: String,
     val day: String,

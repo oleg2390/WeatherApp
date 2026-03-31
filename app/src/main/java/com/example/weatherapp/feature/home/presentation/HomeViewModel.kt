@@ -18,6 +18,7 @@ import com.example.weatherapp.feature.home.presentation.model.DailyWeatherUi
 import com.example.weatherapp.feature.home.presentation.model.HomeWeatherUi
 import com.example.weatherapp.feature.home.presentation.model.HourlyWeatherUi
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.collections.immutable.toPersistentList
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -221,8 +222,8 @@ class HomeViewModel @Inject constructor(
                 description = current.description.toSentenceCase(),
                 iconUrl = buildIconUrl(current.iconCode)
             ),
-            hourly = hourly.take(12).map { it.toHourlyUi(timezoneOffsetSeconds) },
-            daily = daily.take(5).map { it.toDailyUi(timezoneOffsetSeconds) }
+            hourly = hourly.take(12).map { it.toHourlyUi(timezoneOffsetSeconds) }.toPersistentList(),
+            daily = daily.take(5).map { it.toDailyUi(timezoneOffsetSeconds) }.toPersistentList()
         )
     }
 
